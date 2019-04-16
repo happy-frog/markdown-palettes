@@ -7,9 +7,15 @@
     <title>luogu-markdown-editor</title>
   </head>
   <body>
-    <div id="editor-container" style="height: 700px;">
-      <div id="editor"></div>
-    </div>
-    <!-- built files will be auto injected -->
+          <link rel="stylesheet" href="markdown-palettes.css">
+      <script src="markdown-palettes.js"></script>
+      <div id="editor-container" style="height: 700px;">
+        <div id="editor"></div>
+      </div>
+      <script>
+        var markdownEditor = new MarkdownPalettes("#editor");
+        markdownEditor.contenet = "**content**";
+        var code = markdownEditor.content;
+      </script>
   </body>
 </html>
