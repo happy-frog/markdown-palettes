@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+    <body>
+            <div id="editor-container" style="height: 700px;">
+                <markdown-palettes v-model="value"></markdown-palettes>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/vue@2.5"></script>
+            <script src="MarkdownPalettes.umd.min.js"></script>
+            <script>
+              var app = new Vue({
+                el: '#editor-container',
+                components: { MarkdownPalettes },
+                data: () => { value: 'Hello, **Markdown*Palettes**!' }
+              })
+            </script>
+    </body>
+</html>
