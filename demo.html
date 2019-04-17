@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="markdown-palettes.min.js"></script>
-    <link rel="stylesheet" href="markdown-palettes.css">
-</head>
-<body>
-    <div style="height: 800px">
-        <div id="editor"></div>
-    </div>
-
-    <script>
-        var editor = new MarkdownPalettes('#editor');
-    </script>
-</body>
+<meta charset="utf-8">
+<html>
+    <body>
+         <link rel="stylesheet" href="MarkdownPalettes.css">
+<div id="editor-container" style="height: 700px;">
+  <markdown-palettes v-model="value"></markdown-palettes>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5"></script>
+<script src="MarkdownPalettes.umd.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#editor-container',
+    components: { MarkdownPalettes },
+    data: () => { value: 'Hello, **Markdown*Palettes**!' }
+  })
+</script>
+    </body>
 </html>
